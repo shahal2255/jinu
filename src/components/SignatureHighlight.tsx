@@ -20,8 +20,12 @@ export const SignatureHighlight: React.FC<SignatureHighlightProps> = ({ onOrderN
             <div className="lg:col-span-6 p-8 sm:p-12 lg:p-16 space-y-6">
               
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/15 border border-orange-500/40 text-orange-400 text-xs font-semibold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>The Yamama Favourite · Must Try</span>
+                <img
+                  src={RESTAURANT_IMAGES.logo}
+                  alt="Yamama Logo"
+                  className="w-4 h-4 rounded-full object-cover"
+                />
+                <span>The Yamama Favourite · Refill Your Energy</span>
               </div>
 
               <div className="space-y-3">
@@ -86,6 +90,25 @@ export const SignatureHighlight: React.FC<SignatureHighlightProps> = ({ onOrderN
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#0f1115] via-transparent to-transparent lg:w-32" />
+
+              {/* Official Chef Pick Badge with Reference Logo */}
+              <div className="absolute top-5 right-5 z-20 flex items-center gap-3 bg-[#090a0c]/90 backdrop-blur-md border border-orange-500/50 rounded-2xl p-2.5 shadow-2xl">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400 bg-black shrink-0 shadow-md">
+                  <img
+                    src={RESTAURANT_IMAGES.logo}
+                    alt="Yamama Chef Signature Pick"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="pr-1 text-left">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300 block">
+                    Yamama Signature
+                  </span>
+                  <span className="text-xs font-bold text-[#f4efe6] block">
+                    Refill Your Energy
+                  </span>
+                </div>
+              </div>
             </div>
 
           </div>

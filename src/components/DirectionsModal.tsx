@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, MapPin, Navigation, Copy, Check, Phone } from 'lucide-react';
-import { RESTAURANT_INFO } from '../data/restaurantData';
+import { RESTAURANT_INFO, RESTAURANT_IMAGES } from '../data/restaurantData';
 
 interface DirectionsModalProps {
   isOpen: boolean;
@@ -38,13 +38,17 @@ export const DirectionsModal: React.FC<DirectionsModalProps> = ({ isOpen, onClos
         </button>
 
         <div className="space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-orange-600/20 border border-orange-500/40 flex items-center justify-center">
-              <Navigation className="w-6 h-6 text-orange-400" />
+          <div className="flex items-center gap-3.5">
+            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-orange-500/80 shadow-md bg-black shrink-0">
+              <img
+                src={RESTAURANT_IMAGES.logo}
+                alt="Yamama Shawaya Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
-              <span className="text-[11px] uppercase font-bold text-orange-400 tracking-wider">
-                Location & Navigation
+              <span className="text-[11px] uppercase font-bold text-amber-400 tracking-wider">
+                Refill Your Energy · Location
               </span>
               <h3 className="font-display text-xl font-bold text-[#f4efe6]">
                 Yamama Shawaya

@@ -1,8 +1,8 @@
 import { MenuItem, MenuCategory } from '../types/restaurant';
 
-// High-fidelity image assets generated for Yamama Shawaya
+// High-fidelity image assets for Yamama Shawaya
 export const RESTAURANT_IMAGES = {
-  logo: '/src/assets/images/yamama_logo.jpg',
+  logo: '/yamama-logo.jpg',
   hero: '/src/assets/images/hero_arabian_shawaya_1790143288397.jpg',
   masalaShawaya: '/src/assets/images/masala_shawaya_rice_1790143309557.jpg',
   chickenShawaya: '/src/assets/images/chicken_shawaya_1790143323642.jpg',

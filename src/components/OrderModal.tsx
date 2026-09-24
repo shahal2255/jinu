@@ -76,12 +76,24 @@ export const OrderModal: React.FC<OrderModalProps> = ({
 
         {isSubmitted ? (
           <div className="text-center py-8 space-y-4">
-            <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto">
-              <Check className="w-8 h-8" />
+            <div className="relative w-20 h-20 mx-auto">
+              <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-orange-400 shadow-xl bg-black flex items-center justify-center">
+                <img
+                  src={RESTAURANT_IMAGES.logo}
+                  alt="Yamama Shawaya Logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-emerald-500 text-black flex items-center justify-center font-bold shadow-md">
+                <Check className="w-4 h-4 stroke-[3]" />
+              </div>
             </div>
             <h3 className="font-display text-2xl font-bold text-[#f4efe6]">
               Order Request Received!
             </h3>
+            <p className="text-xs uppercase font-bold text-amber-400 tracking-wider">
+              Refill Your Energy · Yamama Shawaya
+            </p>
             <p className="text-sm text-[#b8b0a5] max-w-sm mx-auto">
               Thank you {customerName || 'valued customer'}. Our team at Yamama Shawaya will confirm your {serviceType.toLowerCase()} order for <strong className="text-orange-400">{dish.name}</strong> {selectedPortion ? `(${selectedPortion.portion})` : ''} shortly.
             </p>

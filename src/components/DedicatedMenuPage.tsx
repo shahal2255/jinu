@@ -135,14 +135,21 @@ export const DedicatedMenuPage: React.FC<DedicatedMenuPageProps> = ({
 
           {/* Official Restaurant Logo Badge */}
           <div className="flex justify-center">
-            <div className="relative group cursor-pointer" onClick={onBackToHome}>
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-orange-600 to-amber-500 rounded-full blur-md opacity-70 group-hover:opacity-100 transition duration-500" />
-              <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-orange-500/80 shadow-2xl bg-black flex items-center justify-center">
-                <img
-                  src={RESTAURANT_IMAGES.logo}
-                  alt="Yamama Shawaya Official Mascot Logo"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                />
+            <div className="relative group cursor-pointer text-center" onClick={onBackToHome}>
+              <div className="absolute -inset-2 bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-400 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-500" />
+              <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full p-2 bg-gradient-to-br from-amber-400 via-orange-600 to-amber-700 shadow-2xl mx-auto">
+                <div className="w-full h-full rounded-full overflow-hidden bg-black flex items-center justify-center border border-black/80">
+                  <img
+                    src={RESTAURANT_IMAGES.logo}
+                    alt="Yamama Shawaya Official Mascot Logo"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </div>
+              <div className="mt-3">
+                <span className="inline-block px-3 py-1 rounded-full bg-[#12141a] border border-orange-500/40 text-[11px] font-bold uppercase tracking-wider text-amber-300 shadow">
+                  ★★★ Refill Your Energy ★★★
+                </span>
               </div>
             </div>
           </div>
@@ -209,6 +216,20 @@ export const DedicatedMenuPage: React.FC<DedicatedMenuPageProps> = ({
             
             {/* Search Input Bar */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
+              {/* Brand Logo Mini Stamp */}
+              <div className="hidden lg:flex items-center gap-2.5 px-3 py-2 rounded-xl bg-[#12141a] border border-orange-500/40 shrink-0">
+                <div className="w-7 h-7 rounded-full overflow-hidden border border-amber-400 bg-black shrink-0">
+                  <img
+                    src={RESTAURANT_IMAGES.logo}
+                    alt="Yamama Logo"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="text-[11px] font-bold text-amber-300 uppercase tracking-wider">
+                  Yamama Menu
+                </span>
+              </div>
+
               <div className="relative flex-1 w-full">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-orange-400/80" />
                 <input

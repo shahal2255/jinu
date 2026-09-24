@@ -128,8 +128,27 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate, onOpenO
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="sm:hidden bg-[#0d0f12] border-b border-orange-900/40 px-5 pt-3 pb-6 space-y-3 animate-in fade-in slide-in-from-top-3 duration-200">
-          <div className="flex flex-col gap-2 pt-2 border-b border-white/5 pb-3">
+        <div className="sm:hidden bg-[#0d0f12] border-b border-orange-900/40 px-5 pt-4 pb-6 space-y-4 animate-in fade-in slide-in-from-top-3 duration-200">
+          {/* Mobile Brand Card with Reference Logo */}
+          <div className="flex items-center gap-3.5 p-3 rounded-2xl bg-[#14161c] border border-orange-500/30">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-orange-400 shadow-md bg-black shrink-0">
+              <img
+                src={RESTAURANT_IMAGES.logo}
+                alt="Yamama Shawaya Logo"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <span className="font-display text-base font-bold text-[#f4efe6] block uppercase tracking-wide">
+                Yamama Shawaya
+              </span>
+              <span className="text-[11px] font-semibold text-amber-400 block">
+                Refill Your Energy · Angadipuram
+              </span>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-2 pt-1 border-b border-white/5 pb-3">
             <button
               onClick={() => handleNavLinkClick('hero')}
               className="text-left py-2 text-base font-medium text-[#f4efe6] hover:text-orange-400 transition-colors"

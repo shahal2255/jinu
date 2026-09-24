@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Flame, ShoppingBag } from 'lucide-react';
-import { MENU_ITEMS, MENU_CATEGORIES } from '../data/restaurantData';
+import { MENU_ITEMS, MENU_CATEGORIES, RESTAURANT_IMAGES } from '../data/restaurantData';
 import { MenuCategory, MenuItem } from '../types/restaurant';
 
 interface MenuSectionProps {
@@ -22,9 +22,18 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onOrderDish, onOpenFul
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
-              <Flame className="w-3.5 h-3.5" />
-              <span>Fire & Charcoal Specialties</span>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full overflow-hidden border border-orange-500/70 bg-black shrink-0 shadow-md">
+                <img
+                  src={RESTAURANT_IMAGES.logo}
+                  alt="Yamama Shawaya Logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
+                <Flame className="w-3.5 h-3.5" />
+                <span>Fire & Charcoal Specialties · Refill Your Energy</span>
+              </div>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#f4efe6]">
               Our Signature Menu

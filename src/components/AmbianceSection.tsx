@@ -9,9 +9,18 @@ export const AmbianceSection: React.FC = () => {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div className="flex justify-center mb-2">
+            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-orange-500/70 bg-black shadow-lg">
+              <img
+                src={RESTAURANT_IMAGES.logo}
+                alt="Yamama Shawaya Hospitality"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
           <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
             <SunMedium className="w-3.5 h-3.5" />
-            <span>The Yamama Dining Experience</span>
+            <span>The Yamama Dining Experience · Refill Your Energy</span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#f4efe6] text-balance">
             Good Food. Warm Ambience. Great Moments.

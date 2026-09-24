@@ -15,20 +15,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenOrder }) => {
           
           {/* Brand Column (lg:col-span-4) */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-500/60 shadow-lg shadow-orange-950/60 bg-black flex items-center justify-center shrink-0">
-                <img
-                  src={RESTAURANT_IMAGES.logo}
-                  alt="Yamama Shawaya Logo"
-                  className="w-full h-full object-cover"
-                />
+            <div className="flex items-center gap-3.5">
+              <div className="w-14 h-14 rounded-full p-1 bg-gradient-to-br from-amber-400 via-orange-600 to-amber-700 shadow-xl shadow-orange-950/70 shrink-0">
+                <div className="w-full h-full rounded-full overflow-hidden bg-black flex items-center justify-center">
+                  <img
+                    src={RESTAURANT_IMAGES.logo}
+                    alt="Yamama Shawaya Logo"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <div>
-                <span className="font-display text-xl font-bold tracking-wider text-[#f4efe6] uppercase">
+                <span className="font-display text-xl sm:text-2xl font-bold tracking-wider text-[#f4efe6] uppercase">
                   Yamama Shawaya
                 </span>
-                <span className="block text-[11px] text-orange-400 font-semibold tracking-wider uppercase">
-                  Arabian Grills · Refill Your Energy
+                <span className="block text-[11px] text-amber-400 font-bold tracking-wider uppercase">
+                  ★★★ Refill Your Energy ★★★
                 </span>
               </div>
             </div>

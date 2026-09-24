@@ -92,10 +92,12 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu, onCallNow }) => {
 
           {/* Official Mascot Logo Hero Feature Card */}
           <div className="lg:col-span-4 flex justify-center">
-            <div className="relative group">
-              <div className="absolute -inset-2 bg-gradient-to-r from-orange-600/30 to-amber-500/30 rounded-full blur-2xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
-              <div className="relative w-56 sm:w-64 h-56 sm:h-64 rounded-full p-2 bg-[#090a0c] border-2 border-orange-500/50 shadow-2xl shadow-orange-950/80">
-                <div className="w-full h-full rounded-full overflow-hidden bg-black flex items-center justify-center">
+            <div className="relative group text-center">
+              <div className="absolute -inset-3 bg-gradient-to-r from-orange-600/40 via-amber-500/30 to-yellow-500/20 rounded-full blur-2xl opacity-80 group-hover:opacity-100 transition duration-700" />
+              
+              {/* Outer decorative ring */}
+              <div className="relative w-60 sm:w-72 h-60 sm:h-72 rounded-full p-2.5 bg-gradient-to-br from-amber-400 via-orange-600 to-amber-700 shadow-2xl shadow-orange-950/90">
+                <div className="w-full h-full rounded-full overflow-hidden bg-black flex items-center justify-center border-2 border-black/80">
                   <img
                     src={RESTAURANT_IMAGES.logo}
                     alt="Official Yamama Shawaya Logo - Refill Your Energy"
@@ -103,11 +105,19 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu, onCallNow }) => {
                   />
                 </div>
               </div>
-              {/* Motto badge under the logo */}
-              <div className="mt-4 text-center">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-[#121419]/90 border border-orange-500/40 text-xs font-bold uppercase tracking-wider text-amber-300 shadow-md">
-                  Refill Your Energy
-                </span>
+
+              {/* Motto badge under the logo with 3-star brand seal */}
+              <div className="mt-5 space-y-2">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#121419]/95 border border-orange-500/50 shadow-xl backdrop-blur-md">
+                  <span className="text-amber-400 text-xs">★★★</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
+                    Refill Your Energy
+                  </span>
+                  <span className="text-amber-400 text-xs">★★★</span>
+                </div>
+                <div className="text-[11px] text-[#a8a195] font-medium tracking-wide">
+                  Yamama Shawaya · Angadipuram, Kerala
+                </div>
               </div>
             </div>
           </div>

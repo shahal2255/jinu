@@ -23,6 +23,25 @@ export const AboutSection: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-transparent to-transparent opacity-80" />
 
+              {/* Floating Official Brand Seal with Logo */}
+              <div className="absolute top-4 right-4 z-20 flex items-center gap-3 bg-[#090a0c]/90 backdrop-blur-md border border-orange-500/50 rounded-full px-3.5 py-1.5 shadow-2xl">
+                <div className="w-8 h-8 rounded-full overflow-hidden border border-amber-400 bg-black shrink-0">
+                  <img
+                    src={RESTAURANT_IMAGES.logo}
+                    alt="Yamama Official Brand Logo"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="text-left">
+                  <span className="text-[10px] uppercase font-bold text-amber-300 block leading-tight">
+                    Refill Your Energy
+                  </span>
+                  <span className="text-[9px] text-[#b8b0a5] block">
+                    Yamama Shawaya Angadipuram
+                  </span>
+                </div>
+              </div>
+
               {/* Float Experience Badge */}
               <div className="absolute bottom-6 left-6 right-6 p-5 rounded-xl bg-[#0e1014]/90 backdrop-blur-md border border-orange-500/30 flex items-center gap-4">
                 <div className="w-12 h-12 rounded-lg bg-orange-600/20 border border-orange-500/40 flex items-center justify-center shrink-0">
@@ -45,9 +64,18 @@ export const AboutSection: React.FC = () => {
 
           {/* Right Text Column */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Our Heritage & Craft</span>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full overflow-hidden border border-orange-500/70 bg-black shadow-md shrink-0">
+                <img
+                  src={RESTAURANT_IMAGES.logo}
+                  alt="Yamama Mascot Emblem"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Our Heritage & Craft · Refill Your Energy</span>
+              </div>
             </div>
 
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#f4efe6] leading-tight">

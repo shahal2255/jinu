@@ -1,6 +1,6 @@
 import React from 'react';
 import { Utensils, ShoppingBag, Truck, ArrowRight } from 'lucide-react';
-import { RESTAURANT_INFO } from '../data/restaurantData';
+import { RESTAURANT_INFO, RESTAURANT_IMAGES } from '../data/restaurantData';
 
 interface ServicesSectionProps {
   onSelectService: (serviceType: 'Dine-In' | 'Takeaway' | 'Home Delivery') => void;
@@ -12,8 +12,17 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
+          <div className="flex justify-center mb-2">
+            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-orange-500/70 bg-black shadow-lg">
+              <img
+                src={RESTAURANT_IMAGES.logo}
+                alt="Yamama Shawaya Hospitality Services"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
           <div className="text-xs font-bold uppercase tracking-widest text-orange-400">
-            How We Serve You
+            How We Serve You · Refill Your Energy
           </div>
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#f4efe6]">
             Dining & Order Options

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sparkles, Flame, Clock, Users } from 'lucide-react';
-import { RESTAURANT_INFO } from '../data/restaurantData';
+import { RESTAURANT_INFO, RESTAURANT_IMAGES } from '../data/restaurantData';
 
 export const WhyYamamaSection: React.FC = () => {
   const getIcon = (id: string) => {
@@ -22,11 +22,24 @@ export const WhyYamamaSection: React.FC = () => {
     <section id="why-yamama" className="py-24 bg-[#090a0c] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
+        {/* Section Header with Logo Seal */}
         <div className="text-center max-w-2xl mx-auto space-y-4 mb-16">
+          <div className="flex justify-center mb-2">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-amber-400 rounded-full blur-sm opacity-70 group-hover:opacity-100 transition duration-300" />
+              <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-orange-400 shadow-xl bg-black flex items-center justify-center">
+                <img
+                  src={RESTAURANT_IMAGES.logo}
+                  alt="Yamama Shawaya Quality Guarantee"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+            </div>
+          </div>
+
           <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
             <Flame className="w-3.5 h-3.5" />
-            <span>The Yamama Distinction</span>
+            <span>The Yamama Distinction · Refill Your Energy</span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#f4efe6]">
             Why Yamama Shawaya

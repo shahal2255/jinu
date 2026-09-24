@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Clock, Navigation, ShoppingBag, ExternalLink } from 'lucide-react';
-import { RESTAURANT_INFO } from '../data/restaurantData';
+import { RESTAURANT_INFO, RESTAURANT_IMAGES } from '../data/restaurantData';
 
 interface ContactSectionProps {
   onCallNow: () => void;
@@ -19,9 +19,18 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
+          <div className="flex justify-center mb-2">
+            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-orange-500/70 bg-black shadow-lg">
+              <img
+                src={RESTAURANT_IMAGES.logo}
+                alt="Yamama Shawaya Logo"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
           <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
             <MapPin className="w-3.5 h-3.5" />
-            <span>Visit Us & Connect</span>
+            <span>Visit Us & Connect · Refill Your Energy</span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#f4efe6]">
             Find Yamama Shawaya
@@ -168,18 +177,24 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 </p>
               </div>
 
-              {/* Central Map Pin Graphic */}
-              <div className="relative z-10 py-10 flex flex-col items-center justify-center text-center">
+              {/* Central Map Pin Graphic with Official Yamama Mascot Logo */}
+              <div className="relative z-10 py-8 flex flex-col items-center justify-center text-center">
                 <div className="relative">
-                  <div className="w-16 h-16 rounded-full bg-orange-600/30 animate-ping absolute inset-0" />
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-amber-700 flex items-center justify-center shadow-xl shadow-orange-950/80 relative z-10">
-                    <MapPin className="w-8 h-8 text-black fill-black" />
+                  <div className="w-20 h-20 rounded-full bg-orange-600/30 animate-ping absolute inset-0" />
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 via-orange-600 to-amber-700 p-1 flex items-center justify-center shadow-2xl shadow-orange-950/90 relative z-10">
+                    <div className="w-full h-full rounded-full overflow-hidden bg-black flex items-center justify-center">
+                      <img
+                        src={RESTAURANT_IMAGES.logo}
+                        alt="Yamama Shawaya Landmark Location"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
 
-                <div className="mt-4 px-4 py-2 rounded-xl bg-[#090a0c]/90 border border-orange-500/40 backdrop-blur-md">
-                  <span className="font-bold text-sm text-[#f4efe6]">Yamama Shawaya</span>
-                  <span className="text-[11px] text-orange-400 block">Angadipuram</span>
+                <div className="mt-4 px-4 py-2 rounded-xl bg-[#090a0c]/90 border border-orange-500/40 backdrop-blur-md shadow-lg">
+                  <span className="font-bold text-sm text-[#f4efe6] block">Yamama Shawaya</span>
+                  <span className="text-[11px] text-amber-300 font-semibold block">Refill Your Energy · Angadipuram</span>
                 </div>
               </div>
 

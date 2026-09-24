@@ -1,0 +1,8 @@
+{
+  "name": "Remix Yamama Shawaya Digital Experience",
+  "description": "A premium, modern website showcasing authentic Arabian grilled delicacies with an elegant, responsive design for Yamama Shawaya.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
